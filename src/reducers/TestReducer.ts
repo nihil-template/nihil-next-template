@@ -22,6 +22,6 @@ export const TestReducer = createSlice({
   },
 });
 
-export const { ChangeWord } = TestReducer.actions;
+export const { ChangeWord, } = TestReducer.actions;
 
 export default TestReducer.reducer;

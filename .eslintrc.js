@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     node: true,
-    es6: true,
+    es2021: true,
   },
   parser: '@typescript-eslint/parser',
   extends: [
@@ -19,6 +19,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: [ '@typescript-eslint', 'import', 'react', 'react-hooks', ],
   rules: {
@@ -48,31 +51,24 @@ module.exports = {
     ],
     'object-curly-spacing': [ 'warn', 'always', ],
     'no-shadow': 'off',
-    indent: [ 'warn', 2, ],
-    'comma-dangle': [
-      'warn',
-      {
-        arrays: 'always',
-        functions: 'never',
-        objects: 'always',
-        imports: 'never',
-        exports: 'never',
-      },
-    ],
+    indent: [ 'warn', 2, { SwitchCase: 1, }, ],
+    'comma-dangle': [ 'warn', {
+      arrays: 'always',
+      functions: 'never',
+      objects: 'always',
+      imports: 'never',
+      exports: 'never',
+    }, ],
     'jsx-quotes': [ 'error', 'prefer-single', ],
     'linebreak-style': 'off',
 
     // 임포트 규칙
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': [ 'error', 'ignorePackages', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }, ],
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
@@ -80,12 +76,9 @@ module.exports = {
     // 리액트 규칙
     'react/jsx-props-no-spreading': 'off',
     'react/forbid-prop-types': 'off',
-    'react/jsx-filename-extension': [
-      'error',
-      {
-        extensions: [ 'js', 'jsx', '.ts', '.tsx', ],
-      },
-    ],
+    'react/jsx-filename-extension': [ 'error', {
+      extensions: [ 'js', 'jsx', '.ts', '.tsx', ],
+    }, ],
     'react/no-danger': 'off',
     'react/jsx-curly-brace-presence': [
       'warn',

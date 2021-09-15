@@ -1,19 +1,25 @@
 import React from 'react';
 import Document, {
-  Html, Head, Main, NextScript
+  Html, Head, Main, NextScript, DocumentContext
 } from 'next/document';
 
-const AppDocument = () => (
-  <Html lang='ko'>
-    <Head />
-    <body>
-      <Main />
-      <NextScript />
-    </body>
-  </Html>
-);
+class NextDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps, };
+  }
 
-AppDocument.getInitialProps = Document.getInitialProps;
-AppDocument.renderDocument = Document.renderDocument;
+  render() {
+    return (
+      <Html lang='ko'>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
 
-export default AppDocument;
+export default NextDocument;

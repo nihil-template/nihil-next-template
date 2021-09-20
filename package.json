@@ -12,10 +12,11 @@
   },
   "homepage": "https://github.com/NIHILncunia/nihil-next-typescript-template#readme",
   "scripts": {
-    "serve": "rm -rf node_modules/.cache && rm -rf build/ && next dev",
-    "start": "rm -rf node_modules/.cache && rm -rf build/ && next build && next start",
-    "build": "rm -rf node_modules/.cache && rm -rf build/ && next build",
-    "export": "rm -rf node_modules/.cache && rm -rf build/ && next build && next export -o app/"
+    "remove": "rm -rf node_modules/.cache && rm -rf build/",
+    "serve": "npm run remove && next dev",
+    "start": "npm run remove && next build && next start",
+    "build": "npm run remove && next build",
+    "export": "npm run remove && next build && next export -o app/"
   },
   "keywords": [],
   "author": "NIHILncunia",
@@ -35,8 +36,8 @@
     "@babel/core": "^7.15.5",
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/babel-preset-css-prop": "^11.2.0",
-    "@types/node": "^16.9.2",
-    "@types/react": "^17.0.21",
+    "@types/node": "^16.9.4",
+    "@types/react": "^17.0.22",
     "@types/react-dom": "^17.0.9",
     "@types/react-redux": "^7.1.18",
     "@types/uuid": "^8.3.1",
@@ -48,7 +49,7 @@
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.25.2",
+    "eslint-plugin-react": "^7.25.3",
     "eslint-plugin-react-hooks": "^4.2.0",
     "typescript": "^4.4.3"
   }

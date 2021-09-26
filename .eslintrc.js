@@ -67,6 +67,7 @@ module.exports = {
     'global-require': 'off',
     'class-methods-use-this': 'off',
     'no-useless-constructor': 'off',
+    'no-useless-return': 'off',
     'lines-between-class-members': 'off',
 
     // 임포트 규칙

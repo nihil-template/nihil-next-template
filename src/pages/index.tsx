@@ -1,30 +1,21 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
-import { useSelector, useDispatch } from 'react-redux';
-import { AppDispatch, RootState } from '@/store';
-import { ChangeWord } from '@/reducers/TestReducer';
+import AppLayout from '@/layouts/AppLayout';
+import { useSiteMeta } from '@/hooks';
 
 const IndexPage = () => {
-  const word = useSelector((state: RootState) => state.test.word);
-  const dispatch = useDispatch<AppDispatch>();
+  const style = css``;
 
-  const onClickButton = useCallback(() => {
-    dispatch(ChangeWord());
-  }, [ word, ]);
-
-  const style = css`
-    padding: 10px;
-    background-color: #333333;
-    color: #ffffff;
-    margin-bottom: 10px;
-  `;
+  const meta = useSiteMeta({
+    title: '홈',
+    url: '/',
+  });
 
   return (
     <>
-      <div css={style}>Hello {word}!!</div>
-      <button type='button' onClick={onClickButton}>
-        클릭해서 변경
-      </button>
+      <AppLayout meta={meta}>
+        <div id='index-page' css={style}>메인</div>
+      </AppLayout>
     </>
   );
 };

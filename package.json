@@ -1,16 +1,16 @@
 {
-  "name": "nihil-next-typescript-template",
+  "name": "nihil-next-template",
   "version": "1.0.0",
-  "description": "넥스트에서 타입스크립트 편하게 쓰려고 만든 템플릿",
+  "description": "Nextjs 편하게 쓰려고 만든 템플릿. 타입스크립트 기본 지원.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NIHILncunia/nihil-next-typescript-template.git"
+    "url": "git+https://github.com/NIHILncunia/nihil-next-template.git"
   },
   "bugs": {
-    "url": "https://github.com/NIHILncunia/nihil-next-typescript-template/issues"
+    "url": "https://github.com/NIHILncunia/nihil-next-template/issues"
   },
-  "homepage": "https://github.com/NIHILncunia/nihil-next-typescript-template#readme",
+  "homepage": "https://github.com/NIHILncunia/nihil-next-template#readme",
   "scripts": {
     "remove": "rm -rf node_modules/.cache && rm -rf build/",
     "serve": "npm run remove && next dev",

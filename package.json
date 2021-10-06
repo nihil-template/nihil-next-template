@@ -5,12 +5,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NIHILncunia/nihil-next-template.git"
+    "url": "git+https://github.com/nihil-template/nihil-next-template.git"
   },
   "bugs": {
-    "url": "https://github.com/NIHILncunia/nihil-next-template/issues"
+    "url": "https://github.com/nihil-template/nihil-next-template/issues"
   },
-  "homepage": "https://github.com/NIHILncunia/nihil-next-template#readme",
+  "homepage": "https://github.com/nihil-template/nihil-next-template#readme",
   "scripts": {
     "remove": "rm -rf node_modules/.cache && rm -rf build/",
     "serve": "npm run remove && next dev",

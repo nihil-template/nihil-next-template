@@ -5,6 +5,7 @@ export interface ISiteMeta {
   url: string;
   description?: string;
   keywords?: string;
+  type?: string;
 }
 
 export interface ISiteMetaProps {

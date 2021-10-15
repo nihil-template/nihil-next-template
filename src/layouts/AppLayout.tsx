@@ -7,7 +7,16 @@ import {
 } from '@/components/Layout';
 
 const AppLayout = ({ children, meta, }: ISiteMetaProps) => {
-  const style = css``;
+  const style = css`
+    @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  `;
 
   return (
     <>

@@ -14,11 +14,6 @@ const App = ({ Component, pageProps, }: AppProps) => (
           name='viewport'
           content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'
         />
-
-        <link
-          rel='stylesheet'
-          href='https://use.fontawesome.com/releases/v5.15.4/css/all.css'
-        />
       </Head>
       <Component {...pageProps} />
     </Provider>

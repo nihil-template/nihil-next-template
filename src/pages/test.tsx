@@ -12,7 +12,7 @@ const IndexPage = () => {
     dispatch(ChangeWord());
   }, [ word, ]);
 
-  const style = css`
+  const IndexPageStyle = css`
     padding: 10px;
     background-color: #333333;
     color: #ffffff;
@@ -21,7 +21,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <div css={style}>Hello {word}!!</div>
+      <div css={IndexPageStyle}>Hello {word}!!</div>
       <button type='button' onClick={onClickButton}>
         클릭해서 변경
       </button>

@@ -4,7 +4,7 @@ import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
 
 const IndexPage = () => {
-  const style = css``;
+  const IndexPageStyle = css``;
 
   const meta = useSiteMeta({
     title: '홈',
@@ -14,7 +14,7 @@ const IndexPage = () => {
   return (
     <>
       <AppLayout meta={meta}>
-        <div id='index-page' css={style}>메인</div>
+        <div id='index-page' css={IndexPageStyle}>메인</div>
       </AppLayout>
     </>
   );

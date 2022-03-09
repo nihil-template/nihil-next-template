@@ -3,11 +3,11 @@ import { css } from '@emotion/react';
 import { IHaveChildren } from '@/types';
 
 export const MainBlock = ({ children, }: IHaveChildren) => {
-  const style = css``;
+  const MainBlockStyle = css``;
 
   return (
     <>
-      <main css={style}>
+      <main css={MainBlockStyle}>
         {children}
       </main>
     </>
